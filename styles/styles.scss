@@ -71,18 +71,31 @@ section {
 
 .sec3 {
   display: none;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scaleY(1);
 }
 
 .sec4 {
   display: none;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scaleY(1);
 }
 
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
 }
+
+.active {
+  display: block;
+  transform: translateY(0) scale(1);
+animation: scaleAnim 1s ease-in-out;
+@keyframes scaleAnim {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  100% {
+    transform: translateX(0%) scaleX(1);
+  }}}
+
 
 //controls
 
@@ -121,4 +134,11 @@ section {
       pointer-events: none;
     }
   }
+}
+
+//header
+
+.header-content {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
